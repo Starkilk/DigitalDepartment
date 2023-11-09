@@ -1,11 +1,16 @@
-digit = int(input("Введите число: "))
+#2.	Дано натуральное число N. Выведите слово YES, если число N является точной степенью двойки, или слово NO в противном случае. Операцией возведения в степень пользоваться нельзя!
 
-while digit != 1 :
-    digit /=2
-    if digit < 1:
-        break
+digit = float(input("Введите число: "))
 
-if digit == 1:
-    print("YES")
-else:
-    print("NO")
+def fun(x):
+    x /= 2
+    if x > 1:
+        return fun(x)
+    if x == 1:
+        print("YES")
+    else:
+        print("NO")
+
+
+
+fun(digit)
